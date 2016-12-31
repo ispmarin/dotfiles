@@ -44,6 +44,10 @@ alias chmod="chmod -c"
 alias chown="chown -c"
 alias ls='ls --color=auto'
 
+# Alias for managing dotfiles
+# https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
+DOTFILES=$HOME/profissional/projetos/dotfiles
+alias config='/usr/bin/git --git-dir=$DOTFILES --work-tree=$HOME'
 
 bindkey -v
 bindkey "^R" history-incremental-pattern-search-backward 
