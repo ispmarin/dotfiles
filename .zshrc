@@ -49,6 +49,10 @@ alias ls='ls --color=auto'
 DOTFILES=$HOME/profissional/projetos/dotfiles
 alias config='/usr/bin/git --git-dir=$DOTFILES --work-tree=$HOME'
 
+# Command alias
+alias pip_update='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U'
+
+# Search History
 bindkey -v
 bindkey "^R" history-incremental-pattern-search-backward 
 bindkey "^S" history-incremental-pattern-search-forward
