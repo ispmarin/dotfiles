@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/ispmarin/.vim'
+let g:netrw_dirhist_2='/home/ispmarin/.local/share/kded5'
+let g:netrw_dirhist_3='/home/ispmarin/.local/share'
+let g:netrw_dirhist_4='/home/ispmarin/.password-store'
+let g:netrw_dirhist_5='/home/ispmarin/.password-store/NaN'
+let g:netrw_dirhist_6='/home/ispmarin/.password-store/.git'
+let g:netrw_dirhist_7='/home/ispmarin/profissional/src/deeplearningmeetup/src/cookiecutter-deeplearningsp'
+let g:netrw_dirhist_8='/home/ispmarin/.config/openbox'
+let g:netrw_dirhist_9='/home/ispmarin/profissional/projetos/dotfiles'

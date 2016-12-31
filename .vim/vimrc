@@ -1,0 +1,57 @@
+call pathogen#infect()
+syntax on
+filetype plugin indent on
+
+set nocompatible   " Disable vi-compatibility
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs
+set t_Co=256  "forces terminal with 256 colors
+set cmdheight=2
+let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'compatible'
+
+set number "show line numbers
+"set mouse=a "use mouse
+set smartindent "smart indent
+set showmatch "show matching parenthesis
+let loaded_matchparen = 1 " to remove the parent matching
+" let fortran_do_enddo=1 "close do statements
+
+colorscheme molokai "molokai colorscheme
+let g:molokai_original = 1 "change the background
+
+set tabstop=4 "four spaces for tab
+set shiftwidth=4 "indentation depth
+set expandtab  "convert tabs to space
+
+au BufWritePost *.c,*.cpp,*.h,*.f silent! !ctags -R &
+
+set hlsearch      " highlight search terms
+" set incsearch     " show search matches as you type
+set nobackup
+set noswapfile
+set pastetoggle=<F2>
+set paste
+
+nnoremap ; :
+" nmap <silent> ,/ :nohlsearch<CR>
+
+ca tn tabnew
+ca th tabp
+ca tl tabn
+
+"set efm=%E%f:%l.%c:,%E%f:%l:,%C,%C%p%*[0123456789^],%ZError:\ %m,%C%.%#
+"set efm=%E%f:%l.%c:,%E%f:%l:,%C,%C%p%*[0123456789^],%ZAtenção:\ %m,%C%.%#
+
+" autocmd QuickFixCmdPost [^l]* nested copen
+
+" autocmd QuickFixCmdPost    l* nested lwindow
+"
+"
+
+" NerdTree
+" autocmd vimenter * NERDTree
+map <C-m> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+let g:vim_markdown_folding_disabled = 1
